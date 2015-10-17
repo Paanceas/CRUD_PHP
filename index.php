@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Ficha 893311</title>
+    <link rel="stylesheet" href="../css/estilo.css">
   </head>
   <body>
     <h1>Registro Ficha 893311</h1>
