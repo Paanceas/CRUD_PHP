@@ -10,10 +10,32 @@ span {
   color: #ff041f;
   font-size: 1.3em; }
 
+.mensajes {
+  border-bottom: 10px;
+  position: fixed;
+  right: 10px; }
+
 h1 {
   color: #000000;
   text-align: center;
   text-shadow: 1px 1px 2px #000000; }
+
+.Principal {
+  background: #ffffff;
+  box-shadow: 0 1px 2px #656363;
+  display: flex;
+  left: 0;
+  margin-left: 20%;
+  top: 0;
+  width: 60%; }
+  .Principal a {
+    color: #001f3f;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px;
+    width: 25%; }
+    .Principal a:hover {
+      background: rgba(38, 168, 35, 0.73); }
 
 .links {
   background: #ffffff;
@@ -36,11 +58,20 @@ h1 {
     .links a:hover {
       background: rgba(38, 168, 35, 0.73); }
 
+.padding {
+  padding: 30px; }
+
 .contenido {
   background-color: #ffffff;
+  margin-bottom: 10px;
   margin-left: 25%;
   box-shadow: 1px 1px 2px #656363;
   width: 50%; }
+  .contenido table {
+    border-collapse: collapse;
+    width: 100%; }
+    .contenido table td {
+      padding-left: 5px; }
   .contenido form {
     margin: 0 20%;
     padding: 20px; }
@@ -74,7 +105,8 @@ h1 {
       .contenido form input[type="email"]:focus {
         border: 1px solid rgba(38, 168, 35, 0.73);
         color: #001f3f; }
-    .contenido form input[type="submit"] {
+    .contenido form input[type="submit"],
+    .contenido form .btn {
       background-color: rgba(38, 168, 35, 0.73);
       border: none;
       border-radius: 5px;
@@ -82,8 +114,10 @@ h1 {
       font-size: 1em;
       margin: 15px 0;
       padding: 10px;
+      text-decoration: none;
       transition: all 0.6s ease-out; }
-      .contenido form input[type="submit"]:hover {
+      .contenido form input[type="submit"]:hover,
+      .contenido form .btn:hover {
         background-color: rgba(38, 168, 35, 0.73);
         color: #001f3f; }
 

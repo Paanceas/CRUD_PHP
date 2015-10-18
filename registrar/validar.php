@@ -37,7 +37,7 @@ elseif (!preg_match($patronCedula, $cedula)) {
     if (empty($cedula)) {
         $mensajeC = "<span class='mensajes'>* Llene el campo Cedula<span>";
     } else {
-        $mensajeC = "<span class='mensajes'>* La Cedula debe tener entre 6 y 12 números<span>";
+        $mensajeC = "<span class='mensajes'>* La Cedula debe tener entre 6 y 12 números y no llevar letras<span>";
     }
     $senialC = "<span>*</span>";
 
@@ -108,11 +108,11 @@ elseif (!preg_match($patronCedula, $cedula)) {
         }
     }
     if ($cont2 > 0) {
-        echo "<br><span class='mensajes'>El Aprendiz ".$nombre." ya se encuentra registrado</span>";
+        echo "<span class='mensajes'>Aprendiz ".$nombre." ya se encuentra registrado</span>";
     }
     if ($cont2 == 0) {
         fwrite($id, $almacenar);
-        echo "<br><span class='mensajes'>Aprendiz ".$nombre." Registrado Exitosamente</span> ";
+        echo "<span class='mensajes'>Aprendiz ".$nombre." Registrado Exitosamente</span> ";
         //reseteo el value de los input para que quede limpio a un nuevo registro
         $cedula = "";
         $nombre = "";

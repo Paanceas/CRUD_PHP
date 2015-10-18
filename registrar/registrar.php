@@ -11,7 +11,7 @@
       <img src="../img/sena.png"/>
       <a href="../modificar/modificar.php">Modificar Aprendiz</a>
       <a href="../eliminar/eliminar.php">Eliminar Aprendiz</a>
-      <a href="../index.php">Consultar Aprendiz</a>
+      <a href="../consultar/consultar.php">Consultar Aprendiz</a>
       <a href="https://github.com/Paanceas/CRUD_PHP" target="_blank"><img src="../img/github.png" alt="" /></a>
     </div>
         <div class="contenido">

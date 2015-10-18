@@ -15,10 +15,30 @@ body
 span
   color: #ff041f
   font-size: 1.3em
+.mensajes
+  border-bottom: 10px
+  position: fixed
+  right: 10px
 h1
   color: $negro
   text-align: center
   text-shadow: 1px 1px 2px $negro
+.Principal
+  background: $blanco
+  box-shadow: 0 1px 2px $sombra
+  display: flex
+  left: 0
+  margin-left: 20%
+  top: 0
+  width: 60%
+  a
+    color: $submit
+    font-size: 1.2em
+    text-decoration: none
+    padding: 10px
+    width: 25%
+    &:hover
+      background: $verde
 .links
   background: $blanco
   box-shadow: 0 1px 2px $sombra
@@ -39,11 +59,19 @@ h1
     padding: 10px
     &:hover
       background: $verde
+.padding
+  padding: 30px
 .contenido
   background-color: $blanco
+  margin-bottom: 10px
   margin-left: 25%
   box-shadow: 1px 1px 2px $sombra
   width: 50%
+  table
+    border-collapse: collapse
+    width: 100%
+    td
+      padding-left: 5px
   form
     margin: 0 20%
     padding: 20px
@@ -76,7 +104,8 @@ h1
       &:focus
         border: 1px solid $verde
         color: $submit
-    input[type="submit"]
+    input[type="submit"],
+    .btn
       background-color: $verde
       border: none
       border-radius: 5px
@@ -84,6 +113,7 @@ h1
       font-size: 1em
       margin: 15px 0
       padding: 10px
+      text-decoration: none
       transition: all .6s ease-out
       &:hover
         background-color: $verde
