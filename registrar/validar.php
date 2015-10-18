@@ -7,11 +7,21 @@ $patronFijo = "/^[0-9]{7}+$/";
 $patronCelular = "/^[0-9]{10}+$/";
 
 //obtencion de los datos del formulario por post, en variables
-$cedula = $_POST['cedula'];
-$nombre = $_POST['nombre'];
-$correo = $_POST['correo'];
-$telfij = $_POST['telefonofijo'];
-$telmov = $_POST['telefonocelular'];
+if (isset($_POST['cedula'])) {
+  $cedula = $_POST['cedula'];
+}
+if (isset($_POST['nombre'])) {
+  $nombre = $_POST['nombre'];
+}
+if (isset($_POST['correo'])) {
+  $correo = $_POST['correo'];
+}
+if (isset($_POST['telefonofijo'])) {
+  $telfij = $_POST['telefonofijo'];
+}
+if (isset($_POST['telefonocelular'])) {
+  $telmov = $_POST['telefonocelular'];
+}
 
 //validacion de campos vacios
 if (empty($cedula) && empty($nombre) && empty($correo) && empty($telfij) && empty($telmov)) {
@@ -23,7 +33,7 @@ if (empty($cedula) && empty($nombre) && empty($correo) && empty($telfij) && empt
     $mensajeT = "<span class='mensajes'>Por Favor Llene Todos los Campos<span>";
 }
 //validacion del campo cedula
-if (!preg_match($patronCedula, $cedula)) {
+elseif (!preg_match($patronCedula, $cedula)) {
     if (empty($cedula)) {
         $mensajeC = "<span class='mensajes'>* Llene el campo Cedula<span>";
     } else {
@@ -43,7 +53,7 @@ if (!preg_match($patronCedula, $cedula)) {
     //validacion del campo Correo
 } elseif (!preg_match($patronCorreo, $correo)) {
     if (empty($correo)) {
-        $mensajeE = "<span class='mensajes'>* Llene el campo Cedula<span>";
+        $mensajeE = "<span class='mensajes'>* Llene el campo Correo<span>";
     } else {
         $mensajeE = "<span class='mensajes'>* Correo mal escrito ej:correo@example.com<span>";
     }
@@ -73,7 +83,7 @@ if (!preg_match($patronCedula, $cedula)) {
     $registro = array($cedula, $nombre, $correo, $telfij, $telmov);
 
     //creacion del documento txt
-    $id = fopen("registro.txt", 'a');
+    $id = fopen("registro.txt", 'a') or die("Error al crear el Documento txt");
 
     //creacion del implode para los datos del aprendiz
     $almacenar = implode("-", $registro);
@@ -103,6 +113,12 @@ if (!preg_match($patronCedula, $cedula)) {
     if ($cont2 == 0) {
         fwrite($id, $almacenar);
         echo "<br><span class='mensajes'>Aprendiz ".$nombre." Registrado Exitosamente</span> ";
+        //reseteo el value de los input para que quede limpio a un nuevo registro
+        $cedula = "";
+        $nombre = "";
+        $correo = "";
+        $telfij = "";
+        $telmov = "";
     }
     fclose($id);
 }

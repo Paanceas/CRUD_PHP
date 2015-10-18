@@ -7,69 +7,98 @@
   </head>
   <body>
     <h1>Registro</h1>
-        <form action="validar.php" method="post">
+    <div class="links">
+      <img src="../img/sena.png"/>
+      <a href="../modificar/modificar.php">Modificar Aprendiz</a>
+      <a href="../eliminar/eliminar.php">Eliminar Aprendiz</a>
+      <a href="../index.php">Consultar Aprendiz</a>
+      <a href="https://github.com/Paanceas/CRUD_PHP" target="_blank"><img src="../img/github.png" alt="" /></a>
+    </div>
+        <div class="contenido">
+          <form action="validar.php" method="post">
+            <?php
+            if (isset($senialC)) {
+                echo $senialC;
+            }
+            ?>
             <label for="cedula">Cedula</label>
-            <input type="text" name="cedula" placeholder="Digite cedula" id="cedula">
-                   <?php
-                   if (isset($senialC)) {
-                       echo $senialC;
-                   }
-                   ?>
+             <input type="text" name="cedula" placeholder="Digite cedula" id="cedula" value="<?php
+             if (isset($cedula)) {
+                 echo $cedula;
+             }
+             ?>">
 
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" placeholder="Digite nombre" id="nombre">
-                   <?php
-                   if (isset($senialN)) {
-                       echo $senialN;
-                   }
-                   ?>
+             <?php
+             if (isset($senialN)) {
+                 echo $senialN;
+             }
+             ?>
+             <label for="nombre">Nombre</label>
+             <input type="text" name="nombre" placeholder="Digite nombre" id="nombre" value="<?php
+             if (isset($nombre)) {
+                 echo $nombre;
+             }
+             ?>">
 
-            <label for="correo">Correo</label>
-            <input type="email" name="correo" placeholder="Digite correo" id="correo">
-                   <?php
-                   if (isset($senialE)) {
-                       echo $senialE;
-                   }
-                   ?>
+             <?php
+             if (isset($senialE)) {
+                 echo $senialE;
+             }
+             ?>
+             <label for="correo">Correo</label>
+             <input type="email" name="correo" placeholder="Digite correo" id="correo" value="<?php
+             if (isset($correo)) {
+                 echo $correo;
+             }
+             ?>">
 
-            <label for="telfonofijo">TelFijo</label>
-            <input type="text" name="telefonofijo" placeholder="Digite telefono fijo" id="telfonofijo">
-                   <?php
-                   if (isset($senialF)) {
-                       echo $senialF;
-                   }
-                   ?>
-            <label for="telefonocelular">Celular</label>
-            <input type="text" name="telefonocelular" placeholder="Digite celular" id="telefonocelular">
-                   <?php
-                   if (isset($senialP)) {
-                       echo $senialP;
-                   }
-                   ?><br><br>
+             <?php
+             if (isset($senialF)) {
+                 echo $senialF;
+             }
+             ?>
+             <label for="telfonofijo">TelFijo</label>
+             <input type="text" name="telefonofijo" placeholder="Digite telefono fijo" id="telfonofijo" value="<?php
+             if (isset($telfij)) {
+                 echo $telfij;
+             }
+             ?>">
 
-            <input type="submit" name="registrar" value="registrar">
-            <input type="reset" name="borrar" value="borrar">
-        </form>
-        <?php
-        if (isset($mensajeT)) {
-            echo $mensajeT;
-        } else {
-            if (isset($mensajeC)) {
-                echo $mensajeC;
-            }
-            if (isset($mensajeN)) {
-                echo $mensajeN;
-            }
-            if (isset($mensajeE)) {
-                echo $mensajeE;
-            }
-            if (isset($mensajeF)) {
-                echo $mensajeF;
-            }
-            if (isset($mensajeP)) {
-                echo $mensajeP;
-            }
-        }
-        ?>
+             <?php
+             if (isset($senialP)) {
+                 echo $senialP;
+             }
+             ?>
+             <label for="telefonocelular">Celular</label>
+             <input type="text" name="telefonocelular" placeholder="Digite celular" id="telefonocelular" value="<?php
+             if (isset($telmov)) {
+                 echo $telmov;
+             }
+             ?>">
+
+             <input type="submit" name="registrar" value="registrar">
+         </form>
+        </div>
+       <?php
+       if (isset($mensajeT)) {
+           echo $mensajeT;
+       } else {
+           if (isset($mensajeC)) {
+               echo $mensajeC;
+           }
+           if (isset($mensajeN)) {
+               echo $mensajeN;
+           }
+           if (isset($mensajeE)) {
+               echo $mensajeE;
+           }
+           if (isset($mensajeF)) {
+               echo $mensajeF;
+           }
+           if (isset($mensajeP)) {
+               echo $mensajeP;
+           }
+       }
+       ?>
   </body>
 </html>

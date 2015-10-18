@@ -2,9 +2,89 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+  color: #001f3f;
+  font-family: "Raleway", sans-serif; }
 
 span {
-  color: #ff041f; }
+  color: #ff041f;
+  font-size: 1.3em; }
+
+h1 {
+  color: #000000;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000000; }
+
+.links {
+  background: #ffffff;
+  box-shadow: 0 1px 2px #656363;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 200px; }
+  .links img {
+    width: 90%;
+    margin: 5%; }
+  .links a {
+    color: #001f3f;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px; }
+    .links a:hover {
+      background: rgba(38, 168, 35, 0.73); }
+
+.contenido {
+  background-color: #ffffff;
+  margin-left: 25%;
+  box-shadow: 1px 1px 2px #656363;
+  width: 50%; }
+  .contenido form {
+    margin: 0 20%;
+    padding: 20px; }
+    .contenido form label {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px; }
+    .contenido form input[type="search"] {
+      background: none;
+      border: none;
+      border-bottom: 3px solid black;
+      font-size: 1.5em;
+      margin: 10px 1px;
+      padding: 5px;
+      transition: all 0.6s ease-out;
+      width: 100%; }
+      .contenido form input[type="search"]:focus {
+        border-bottom: 3px solid #001f3f;
+        color: #001f3f; }
+    .contenido form input[type="text"],
+    .contenido form input[type="email"] {
+      background: none;
+      border: 1px solid #001f3f;
+      border-radius: 10px;
+      font-size: 1em;
+      margin: 1px 1px 20px 1px;
+      padding: 5px;
+      transition: all 0.2s ease-out;
+      width: 100%; }
+      .contenido form input[type="text"]:focus,
+      .contenido form input[type="email"]:focus {
+        border: 1px solid rgba(38, 168, 35, 0.73);
+        color: #001f3f; }
+    .contenido form input[type="submit"] {
+      background-color: rgba(38, 168, 35, 0.73);
+      border: none;
+      border-radius: 5px;
+      color: #ffffff;
+      font-size: 1em;
+      margin: 15px 0;
+      padding: 10px;
+      transition: all 0.6s ease-out; }
+      .contenido form input[type="submit"]:hover {
+        background-color: rgba(38, 168, 35, 0.73);
+        color: #001f3f; }
 
 /*# sourceMappingURL=estilo.css.map */

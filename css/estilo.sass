@@ -1,6 +1,90 @@
+$negro: #000000
+$sombra: #656363
+$blanco: #ffffff
+$verde: rgba(38, 168, 35, 0.73)
+$submit: #001f3f
+
+$letra: 'Raleway', sans-serif
+
 *
   box-sizing: border-box
 body
   background-color: #f1f1f1
+  color: $submit
+  font-family: $letra
 span
   color: #ff041f
+  font-size: 1.3em
+h1
+  color: $negro
+  text-align: center
+  text-shadow: 1px 1px 2px $negro
+.links
+  background: $blanco
+  box-shadow: 0 1px 2px $sombra
+  display: flex
+  flex-direction: column
+  height: 100%
+  left: 0
+  position: fixed
+  top: 0
+  width: 200px
+  img
+    width: 90%
+    margin: 5%
+  a
+    color: $submit
+    font-size: 1.2em
+    text-decoration: none
+    padding: 10px
+    &:hover
+      background: $verde
+.contenido
+  background-color: $blanco
+  margin-left: 25%
+  box-shadow: 1px 1px 2px $sombra
+  width: 50%
+  form
+    margin: 0 20%
+    padding: 20px
+    label
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 14px
+    input[type="search"]
+      background: none
+      border: none
+      border-bottom: 3px solid black
+      font-size: 1.5em
+      margin: 10px 1px
+      padding: 5px
+      transition: all .6s ease-out
+      width: 100%
+      &:focus
+        border-bottom: 3px solid $submit
+        color: $submit
+    input[type="text"],
+    input[type="email"]
+      background: none
+      border: 1px solid $submit
+      border-radius: 10px
+      font-size: 1em
+      margin: 1px 1px 20px 1px
+      padding: 5px
+      transition: all .2s ease-out
+      width: 100%
+      &:focus
+        border: 1px solid $verde
+        color: $submit
+    input[type="submit"]
+      background-color: $verde
+      border: none
+      border-radius: 5px
+      color: $blanco
+      font-size: 1em
+      margin: 15px 0
+      padding: 10px
+      transition: all .6s ease-out
+      &:hover
+        background-color: $verde
+        color: $submit
