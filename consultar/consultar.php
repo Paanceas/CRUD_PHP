@@ -17,14 +17,6 @@
     </div>
     <div class="contenido">
       <form action="consulta.php" method="post">
-        <!-- input par abuscar -->
-        <input type="search" name="consulta" placeholder="Buscar...">
-        <?php
-        if (isset($senialP)) {
-            echo $senialP;
-        }
-        ?>
-
         <!-- Input para saber por que buscar -->
         <?php
         if (isset($senialB)) {
@@ -32,18 +24,22 @@
         }
         ?>
         <div class="radio">
-          <input type="radio" name="busqueda" id="cedula" value="cedula">
-  				<label for="cedula">Cedula</label>
-
-          <input type="radio" name="busqueda" id="nombre" value="nombre">
-  				<label for="nombre">Nombre</label>
-
-          <input type="radio" name="busqueda" id="fijo" value="fijo">
-  				<label for="fijo">Tel Fijo</label>
-
-          <input type="radio" name="busqueda" id="celular" value="celular">
-  				<label for="celular">Celular</label>
+          <select name="busqueda">
+            <option value="">Buscar Por...</option>
+            <option value="cedula">Cedula</option>
+            <option value="nombre">Nombre</option>
+            <option value="telefono">Telefono</option>
+            <option value="celular">Celular</option>
+          </select>
         </div>
+
+        <!-- input para buscar -->
+        <input type="search" name="consulta" placeholder="Buscar...">
+        <?php
+        if (isset($senialP)) {
+            echo $senialP;
+        }
+        ?>
 
         <!-- input de envio del formulario -->
         <input type="submit" name="consultar" value="consultar">

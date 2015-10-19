@@ -104,17 +104,27 @@ h1
       &:focus
         border: 1px solid $verde
         color: $submit
-    input[type="submit"],
-    .btn
-      background-color: $verde
-      border: none
-      border-radius: 5px
-      color: $blanco
-      font-size: 1em
-      margin: 15px 0
-      padding: 10px
-      text-decoration: none
-      transition: all .6s ease-out
-      &:hover
-        background-color: $verde
-        color: $submit
+    .radio
+      select
+        border: 1px solid $submit
+        border-radius: 10px
+        height: 30px
+        width: 100%
+input[type="submit"],
+.btn
+  background-color: $verde
+  border: none
+  border-radius: 5px
+  color: $blanco
+  font-size: 1em
+  margin: 15px 0
+  padding: 10px
+  text-decoration: none
+  transition: all .6s ease-out
+  &:hover
+    background-color: $verde
+    color: $submit
+.btn-end
+  position: absolute
+  top: 210px
+  left: 940px

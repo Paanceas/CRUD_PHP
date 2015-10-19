@@ -28,7 +28,7 @@ if (empty($palabraConsulta) && empty($buscarPor)) {
       list($cedula_a, $nombre_a, $correo_a, $telfij_a, $telmov_a) = explode("-", $aux);
       if ($buscarPor == "cedula") {
         if ($cedula_a == $palabraConsulta) {
-          echo "Cedula: ".$cedula_a."<br>";
+          echo "<br>Cedula: ".$cedula_a."<br>";
           echo "Nombre: ".$nombre_a."<br>";
           echo "Correo: ".$correo_a."<br>";
           echo "Telefono Fijo: ".$telfij_a."<br>";
@@ -38,7 +38,7 @@ if (empty($palabraConsulta) && empty($buscarPor)) {
         }
       }elseif ($buscarPor == "nombre") {
         if ($nombre_a == $palabraConsulta) {
-          echo "Cedula: ".$cedula_a."<br>";
+          echo "<br>Cedula: ".$cedula_a."<br>";
           echo "Nombre: ".$nombre_a."<br>";
           echo "Correo: ".$correo_a."<br>";
           echo "Telefono Fijo: ".$telfij_a."<br>";
@@ -46,9 +46,9 @@ if (empty($palabraConsulta) && empty($buscarPor)) {
           echo "_________________________"."<br>";
           $cont++;
         }
-      }elseif ($buscarPor == "fijo") {
+      }elseif ($buscarPor == "telefono") {
         if ($telfij_a == $palabraConsulta) {
-          echo "Cedula: ".$cedula_a."<br>";
+          echo "<br>Cedula: ".$cedula_a."<br>";
           echo "Nombre: ".$nombre_a."<br>";
           echo "Correo: ".$correo_a."<br>";
           echo "Telefono Fijo: ".$telfij_a."<br>";
@@ -58,7 +58,7 @@ if (empty($palabraConsulta) && empty($buscarPor)) {
         }
       }elseif ($buscarPor == "celular") {
         if ($telmov_a == $palabraConsulta) {
-          echo "Cedula: ".$cedula_a."<br>";
+          echo "<br>Cedula: ".$cedula_a."<br>";
           echo "Nombre: ".$nombre_a."<br>";
           echo "Correo: ".$correo_a."<br>";
           echo "Telefono Fijo: ".$telfij_a."<br>";
@@ -69,9 +69,9 @@ if (empty($palabraConsulta) && empty($buscarPor)) {
       }
     }
     if ($cont == 0) {
-      echo "No se encontraron registros por ".$buscarPor." = ".$palabraConsulta;
+      echo "<br>No se encontraron registros por ".$buscarPor." = ".$palabraConsulta;
     }else {
-      echo "Total de registros encontrados por ".$buscarPor." y la busqueda ".$palabraConsulta." es de: ".$cont;
+      echo "<br>Total de registros encontrados por ".$buscarPor." y la busqueda ".$palabraConsulta." es de: ".$cont;
     }
 
     echo "</div>";

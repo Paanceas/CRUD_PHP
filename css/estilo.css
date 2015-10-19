@@ -105,20 +105,31 @@ h1 {
       .contenido form input[type="email"]:focus {
         border: 1px solid rgba(38, 168, 35, 0.73);
         color: #001f3f; }
-    .contenido form input[type="submit"],
-    .contenido form .btn {
-      background-color: rgba(38, 168, 35, 0.73);
-      border: none;
-      border-radius: 5px;
-      color: #ffffff;
-      font-size: 1em;
-      margin: 15px 0;
-      padding: 10px;
-      text-decoration: none;
-      transition: all 0.6s ease-out; }
-      .contenido form input[type="submit"]:hover,
-      .contenido form .btn:hover {
-        background-color: rgba(38, 168, 35, 0.73);
-        color: #001f3f; }
+    .contenido form .radio select {
+      border: 1px solid #001f3f;
+      border-radius: 10px;
+      height: 30px;
+      width: 100%; }
+
+input[type="submit"],
+.btn {
+  background-color: rgba(38, 168, 35, 0.73);
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 1em;
+  margin: 15px 0;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.6s ease-out; }
+  input[type="submit"]:hover,
+  .btn:hover {
+    background-color: rgba(38, 168, 35, 0.73);
+    color: #001f3f; }
+
+.btn-end {
+  position: absolute;
+  top: 210px;
+  left: 940px; }
 
 /*# sourceMappingURL=estilo.css.map */
