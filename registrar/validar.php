@@ -1,7 +1,7 @@
 <?php
 //patrones de validacion del form
 $patronCedula = "/^[0-9]{6,12}+$/";
-$patronNombre = "/^[a-zA-Z]+$/";
+$patronNombre = "/[^\s][a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙù\s]+$/";
 $patronCorreo = "/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/";
 $patronFijo = "/^[0-9]{7}+$/";
 $patronCelular = "/^[0-9]{10}+$/";
@@ -33,16 +33,16 @@ if (empty($cedula) && empty($nombre) && empty($correo) && empty($telfij) && empt
     $mensajeT = "<span class='mensajes'>Por Favor Llene Todos los Campos<span>";
 }
 //validacion del campo cedula
-elseif (!preg_match($patronCedula, $cedula)) {
+else if (!preg_match($patronCedula, $cedula)) {
     if (empty($cedula)) {
         $mensajeC = "<span class='mensajes'>* Llene el campo Cedula<span>";
     } else {
-        $mensajeC = "<span class='mensajes'>* La Cedula debe tener entre 6 y 12 números y no llevar letras<span>";
+        $mensajeC = "<span class='mensajes'>* La Cedula debe tener entre 6 y 12 números sin letras<span>";
     }
     $senialC = "<span>*</span>";
 
     //validacion del campo nombre
-} elseif ((!preg_match($patronNombre, $nombre))) {
+} else if ((!preg_match($patronNombre, $nombre))) {
     if (empty($nombre)) {
         $mensajeN = "<span class='mensajes'>* Llene el campo Nombre<span>";
     } else {
@@ -51,7 +51,7 @@ elseif (!preg_match($patronCedula, $cedula)) {
     $senialN = "<span>*</span>";
 
     //validacion del campo Correo
-} elseif (!preg_match($patronCorreo, $correo)) {
+} else if (!preg_match($patronCorreo, $correo)) {
     if (empty($correo)) {
         $mensajeE = "<span class='mensajes'>* Llene el campo Correo<span>";
     } else {
@@ -60,7 +60,7 @@ elseif (!preg_match($patronCedula, $cedula)) {
     $senialE = "<span>*</span>";
 
     //validacion del campo telfij
-} elseif (!preg_match($patronFijo, $telfij)) {
+} else if (!preg_match($patronFijo, $telfij)) {
     if (empty($telfij)) {
         $mensajeF = "<span class='mensajes'>* Llene el campo Telefono Fijo<span>";
     } else {
@@ -69,7 +69,7 @@ elseif (!preg_match($patronCedula, $cedula)) {
     $senialF = "<span>*</span>";
 
     //validacion del campo telmov
-} elseif (!preg_match($patronCelular, $telmov)) {
+} else if (!preg_match($patronCelular, $telmov)) {
     if (empty($telfij)) {
         $mensajeP = "<span class='mensajes'>* Llene el campo Número Celular<span>";
     } else {
