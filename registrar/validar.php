@@ -31,18 +31,17 @@ if (empty($cedula) && empty($nombre) && empty($correo) && empty($telfij) && empt
     $senialF = "<span>*</span>";
     $senialP = "<span>*</span>";
     $mensajeT = "<span class='mensajes'>Por Favor Llene Todos los Campos<span>";
-}
 //validacion del campo cedula
-else if (!preg_match($patronCedula, $cedula)) {
+}elseif (!preg_match($patronCedula, $cedula)) {
     if (empty($cedula)) {
         $mensajeC = "<span class='mensajes'>* Llene el campo Cedula<span>";
     } else {
-        $mensajeC = "<span class='mensajes'>* La Cedula debe tener entre 6 y 12 números sin letras<span>";
+        $mensajeC = "<span class='mensajes'>* La Cedula debe tener entre 6 y 12 números y no llevar letras<span>";
     }
     $senialC = "<span>*</span>";
 
     //validacion del campo nombre
-} else if ((!preg_match($patronNombre, $nombre))) {
+} elseif ((!preg_match($patronNombre, $nombre))) {
     if (empty($nombre)) {
         $mensajeN = "<span class='mensajes'>* Llene el campo Nombre<span>";
     } else {
@@ -51,7 +50,7 @@ else if (!preg_match($patronCedula, $cedula)) {
     $senialN = "<span>*</span>";
 
     //validacion del campo Correo
-} else if (!preg_match($patronCorreo, $correo)) {
+} elseif (!preg_match($patronCorreo, $correo)) {
     if (empty($correo)) {
         $mensajeE = "<span class='mensajes'>* Llene el campo Correo<span>";
     } else {
@@ -60,7 +59,7 @@ else if (!preg_match($patronCedula, $cedula)) {
     $senialE = "<span>*</span>";
 
     //validacion del campo telfij
-} else if (!preg_match($patronFijo, $telfij)) {
+} elseif (!preg_match($patronFijo, $telfij)) {
     if (empty($telfij)) {
         $mensajeF = "<span class='mensajes'>* Llene el campo Telefono Fijo<span>";
     } else {
@@ -69,7 +68,7 @@ else if (!preg_match($patronCedula, $cedula)) {
     $senialF = "<span>*</span>";
 
     //validacion del campo telmov
-} else if (!preg_match($patronCelular, $telmov)) {
+} elseif (!preg_match($patronCelular, $telmov)) {
     if (empty($telfij)) {
         $mensajeP = "<span class='mensajes'>* Llene el campo Número Celular<span>";
     } else {

@@ -54,5 +54,10 @@
                 </form>
             </table>
         </div>
+        <?php
+          if (isset($mensajeM)) {
+              echo $mensajeM;
+          }
+        ?>
     </body>
 </html>
