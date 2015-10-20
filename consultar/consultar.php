@@ -10,9 +10,9 @@
     <h1>Ficha 893311 Fontibon</h1>
     <div class="links">
       <img src="../img/sena.png"/>
+      <a href="../registrar/registrar.php">Registrar Aprendiz</a>
       <a href="../modificar/modificar.php">Modificar Aprendiz</a>
       <a href="../eliminar/eliminar.php">Eliminar Aprendiz</a>
-      <a href="../registrar/registrar.php">Registrar Aprendiz</a>
     </div>
     <div class="contenido">
       <form action="consulta.php" method="post">

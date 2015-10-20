@@ -10,7 +10,6 @@ switch ($opcion) {
     case '1':
         $regMod = file("../registrar/registro.txt");
         list($cedula, $nombre, $correo, $telfij, $telmov) = explode("-", $regMod[$seleccion]);
-        include './formaux.php';
         break;
     case '2':
         //patrones de validacion del form
