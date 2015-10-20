@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Ficha 893311</title>
+        <title>Modificar Aprendiz</title>
         <link rel="stylesheet" href="../css/estilo.css">
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
     </head>
@@ -13,9 +13,9 @@
             <a href="../registrar/registrar.php">Registrar Aprendiz</a>
             <a href="../consultar/consultar.php">Consultar Aprendiz</a>
             <a href="../eliminar/eliminar.php">Eliminar Aprendiz</a>
-            <a href="https://github.com/Paanceas/CRUD_PHP" target="_blank"><img src="../img/github.png" alt="" /></a>
         </div>
         <div class="contenido">
+            <h2>Seleccione el Aprendiz que desea Modificar</h2>
             <?php
             $listaAp = file("../registrar/registro.txt");
 

@@ -9,10 +9,9 @@
     <h1>Registro</h1>
     <div class="links">
       <img src="../img/sena.png"/>
+      <a href="../consultar/consultar.php">Consultar Aprendiz</a>
       <a href="../modificar/modificar.php">Modificar Aprendiz</a>
       <a href="../eliminar/eliminar.php">Eliminar Aprendiz</a>
-      <a href="../consultar/consultar.php">Consultar Aprendiz</a>
-      <a href="https://github.com/Paanceas/CRUD_PHP" target="_blank"><img src="../img/github.png" alt="" /></a>
     </div>
         <div class="contenido">
           <form action="validar.php" method="post">

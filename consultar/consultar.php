@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ficha 893311</title>
+    <title>Consultar Aprendiz</title>
     <link rel="stylesheet" href="../css/estilo.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
   </head>
@@ -13,7 +13,6 @@
       <a href="../modificar/modificar.php">Modificar Aprendiz</a>
       <a href="../eliminar/eliminar.php">Eliminar Aprendiz</a>
       <a href="../registrar/registrar.php">Registrar Aprendiz</a>
-      <a href="https://github.com/Paanceas/CRUD_PHP" target="_blank"><img src="../img/github.png" alt="" /></a>
     </div>
     <div class="contenido">
       <form action="consulta.php" method="post">

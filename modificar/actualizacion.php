@@ -5,8 +5,7 @@ if (isset($_POST['accion'])) {
 if (isset($_POST['seleccion'])) {
     $seleccion = $_POST['seleccion'];
 }
-
-
+$cont = 0;
 switch ($opcion) {
     case '1':
         $regMod = file("../registrar/registro.txt");
@@ -106,17 +105,20 @@ switch ($opcion) {
           if (file_exists("../registrar/registro.txt")) {
               $id = fopen("../registrar/registro.txt", "w+");
           }
-          $cantAprendices = count($archiAprendices);/////Contamos cantidad de datos para controlar el siguiente for
+          /////Contamos cantidad de datos para controlar el siguiente for
           /////Recorriendo el array modificado insertamos uno a uno cada valor en el archivo plano
-          for ($index = 0; $index < $cantAprendices; $index++) {
+          for ($index = 0; $index < count($archiAprendices); $index++) {
               fwrite($id, $archiAprendices[$index]);
           }
           //////////Cerramos el archivo
           fclose($id);
-          $mensajeM ="<span class='mensajes'>El Aprendiz Correspondiente a La cedula ".$cedula." Fue Modificado</span>";
-
-          include 'modificar.php';
-
+          $mensajeM ="<span class='mensajes'>El Aprendiz Correspondiente <br> a La cedula ".$cedula." Fue <br>Modificado</span>";
+          $cont = 1;
           break;
           }
+  }
+  if ($cont == 0) {
+    include './formaux.php';
+  }else {
+    include './modificar.php';
   }
